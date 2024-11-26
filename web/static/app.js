@@ -33,6 +33,7 @@ lab.controller('LabCtrl', function ($scope, $http, $timeout) {
 });
 
 function getWord($http, $timeout, url, callback) {
+  console.log("get: " + url)
   $http.get(url).then(callback, function(resp) {
     $timeout(function() {
       console.log("Retry: " + url);

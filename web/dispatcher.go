@@ -65,7 +65,7 @@ func copy(url, ip string, w http.ResponseWriter) error {
 	if err != nil {
 		return err
 	}
-
+	log.Println("buf", buf)
 	_, err = w.Write(buf)
 	return err
 }
